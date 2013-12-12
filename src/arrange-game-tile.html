@@ -54,8 +54,8 @@
       }
 
     </style>
-    <div class="tile {{invisible: tile.invisible}}" style="-webkit-transform: translate3d({{position.left}}px, {{position.top}}px, 0);">
-      <div id="inner" class="{{winner: tile.winner}}">{{tile.position + 1}}</div>
+    <div class="tile {{ {invisible: tile.invisible} | tokenList }}" style="-webkit-transform: translate3d({{position.left}}px, {{position.top}}px, 0);">
+      <div id="inner" class="{{ {winner: tile.winner} | tokenList }}">{{tile.position + 1}}</div>
     </div>
   </template>
   <script>
