@@ -73,8 +73,12 @@
           this.$.style.textContent += '.tile { width: ' + m.width +
               '%;\n height: ' + m.height + '%;\n}';
         }
+        this.updatePosition();
       },
       updatePosition: function() {
+        if (!this.metrics) {
+          return;
+        }
         this.position = {
           left: this.tile.col * this.metrics.left,
           top: this.tile.row * this.metrics.top
